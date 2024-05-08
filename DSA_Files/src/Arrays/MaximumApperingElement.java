@@ -12,7 +12,7 @@ public class MaximumApperingElement {
         }
         for(int i = 0; i < left_n; i++){
             for(int k = left[i];  k <= right[i]; i++){
-                freq[j] += 1;
+                freq[k] += 1;
             }
         }
 
