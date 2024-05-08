@@ -8,7 +8,7 @@ public class FrequenciesLimitedRangeArrayElements {
         int n = arr.length;
         int i;
         int j;
-        for(i =0; i< n){
+        for(i =0; i< n;){
             if(arr[i] > 0 && arr[i] < n){
                 j = arr[i] - 1;
                 if(arr[j] <= 0) {
