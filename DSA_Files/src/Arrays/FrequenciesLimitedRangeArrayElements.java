@@ -30,8 +30,8 @@ public class FrequenciesLimitedRangeArrayElements {
         }
 
 
-        for(int i = 0; i < n; i++){
-            arr[i] = -arr[i];
+        for(int k = 0; k < n; k++){
+            arr[k] = -arr[k];
         }
         return arr;
     }
