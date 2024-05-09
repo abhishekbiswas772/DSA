@@ -10,7 +10,7 @@ public class MaxmiumOccuredElement {
             freq[right[i] + 1] -= 1;
         }
 
-        int current_max = arr[0];
+        int current_max = freq[0];
         int current_index = 0;
         for(int i = 1;  i <= freq.length; i++){
             freq[i] = freq[i - 1] + freq[i];

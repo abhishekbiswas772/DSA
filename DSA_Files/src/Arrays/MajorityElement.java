@@ -23,6 +23,7 @@ public class MajorityElement {
         int n = arr.length;
         int res = 0;
         int count = 1;
+        // 0(N)
         for(int i = 1; i < n; i++){
             if(arr[res] == arr[i]){
                 count += 1;
@@ -36,6 +37,7 @@ public class MajorityElement {
             }
         }
         count = 0;
+        // o(N)
         for(int i = 0; i < n; i++){
             if(arr[res] == arr[i]){
                 count++;
