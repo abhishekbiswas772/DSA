@@ -31,7 +31,7 @@ int performHoarePartition(int *arr, int n){
 
 
 int main(){
-    int arr[] = {10, 80, 30, 5, 40, 50, 70};
+    int arr[] = {5, 3, 8, 4, 2, 7, 1, 10};
     int n = sizeof(arr)/sizeof(arr[0]);
     int result = performHoarePartition(arr, n);
     std::cout << result << std::endl;
