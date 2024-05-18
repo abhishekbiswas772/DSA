@@ -6,12 +6,27 @@ using namespace std;
 void getBooleanMatrix(std::vector<std::vector<int>> &arr){
     int row = arr.size();
     int cols = arr[0].size();
-
-    for(int  i = 0; i < row; i++){
-        for(int j = 0; j < cols; j++){
+    int cols1 = 0;
+    for(int i = 0; i < row; i++){
+        if(arr[i][0] == 1){
+            cols1 = 1;
+        }
+        for(int j = 1; j < cols; j++){
             if(arr[i][j] == 1){
-                
+                arr[i][0] = 1;
+                arr[0][j] = 1;
             }
+        }
+    }
+
+    for(int i = row - 1; i >= 0; i--){
+        for(int j = cols - 1; j >= 1; j--){
+            if(arr[i][0] == 1 || arr[0][j] == 1){
+                arr[i][j] = 1;
+            }
+        }
+        if(cols1 == 1){
+            arr[i][0] = 1;
         }
     }
 }
