@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
+#include <unordered_set>
 
 
 
@@ -12,12 +12,12 @@ std::vector<int> getInterSectionInUnsortedArray(std::vector<int> arr1 , std::vec
     int n = arr1.size();
     int m = arr2.size();
     std::vector<int> result;
-    std::unordered_map<int, int> uMap;
+    std::unordered_set<int> uSet;
     for(int j = 0; j < n; j++){
-        uMap[arr2[j]]++;
+        uSet.insert(arr2[j]);
     }
     for(int i = 0; i < n; i++){
-        if(uMap.find(arr1[i]) != uMap.end()){
+        if(uSet.find(arr1[i]) != uSet.end()){
             result.push_back(arr1[i]);
         }
     }
