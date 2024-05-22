@@ -2,32 +2,29 @@
 #include <vector>
 #include <unordered_set>
 
-
 using namespace std;
 
-
-bool checkSubArrayZeroSum(std::vector<int> arr){
-    int sum = 0;
+bool checkSubArrayWithZeroSum(std::vector<int> arr){
     int n = arr.size();
-    std::unordered_set<int> uSet;
     int prefix_sum = 0;
+    std::unordered_set<int> uSet;
     for(int i = 0; i < n; i++){
         prefix_sum += arr[i];
-        if(prefix_sum == sum){
+        if(prefix_sum == 0){
             return true;
         }
-        if(uSet.find(prefix_sum) != uSet.end()){
+        if(uSet.find(prefix_sum ) != uSet.end()){
             return true;
         }
         uSet.insert(prefix_sum);
     }
-    return false;
+    return true;
 }
 
 
 int main(){
-    std::vector<int> arr = {-3, 4, -3, -1, 1};
-    bool result = checkSubArrayZeroSum(arr);
-    std::cout << result << std::endl;
+    std::vector<int> arr = {4,2,-3,1,6};
+    bool isResult = checkSubArrayWithZeroSum(arr);
+    std::cout << isResult << std::endl;
     return 0;
 }
