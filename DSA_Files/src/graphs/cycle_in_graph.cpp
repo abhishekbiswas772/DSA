@@ -59,7 +59,7 @@ int main()
     adj[3].push_back(2);
     adj[3].push_back(4);
     adj[4].push_back(3);
-    adj[4].push_back(1); // Adding a back edge to create a cycle
+    adj[4].push_back(1); 
     adj[1].push_back(4);
 
     if (isCycleInGraph(adj, v))
